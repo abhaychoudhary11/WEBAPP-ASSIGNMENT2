@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 5 Stocks - Nifty 50</title>
+    <link rel="stylesheet" href="assignment2.css">
+    
+</head>
+<body>
+   
+
+
+    <!--ABHAY-->
+        <img class="stockbg" src="assignment2logo.png">
+        
+        <div class="stock-table">
+            <h2>STOCKS INDIA</h2>
+            <div class="tabs">
+                <button class="tab-button" onclick="showTab('gainers')">Gainers/Losers</button>
+                <button class="tab-button" onclick="showTab('active')">Most Active</button>
+                <button class="tab-button" onclick="showTab('portfolio')">Portfolio</button>
+            </div>
+        <div id="gainers" class="tab-content">
+            <h3>Top Gainers</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Price</th>
+                        <th>% Chng</th>
+                        <th>Volume</th>
+                        <th>Buy/Sell</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TRENT</td>
+                        <td class="price">7945.95</td>
+                        <td class="change positive">6.66</td>
+                        <td class="volume">10,27,156</td>
+                        <td>
+                            <button class="buy" onclick="addToPortfolio('TRENT', '7945.95', '6.66', '10,27,156', 'buy')">BUY</button>
+                            <button class="sell" onclick="addToPortfolio('TRENT', '7945.95', '6.66', '10,27,156', 'sell')">SELL</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BEL</td>
+                        <td class="price">279.6</td>
+                        <td class="change positive">5.56</td>
+                        <td class="volume">10,27,156</td>
+                        <td>
+                            <button class="buy" onclick="addToPortfolio('BEL', '7945.95', '6.66', '10,27,156', 'buy')">BUY</button>
+                            <button class="sell" onclick="addToPortfolio('BEL', '7945.95', '6.66', '10,27,156', 'sell')">SELL</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>APPL</td>
+                        <td>236.6</td>
+                        <td class="positive">4.44</td>
+                        <td>2,11,56,14,988</td>
+                        <td><button class="buy" onclick="addToPortfolio('APPL', '236.6', '4.44', '2,10,27,156', 'buy')">BUY</button>
+                            <button class="sell" onclick="addToPortfolio('APPL', '236.6', '4.44', '2,10,27,156', 'sell')">SELL</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TESLA</td>
+                        <td>976.6</td>
+                        <td class="positive">3.46</td>
+                        <td>11,56,14,988</td>
+                        <td><button class="buy" onclick="addToPortfolio('TESLA', '976.6', '3.46', '11,10,27,156', 'buy')">BUY</button>
+                            <button class="sell" onclick="addToPortfolio('TESLA', '976.6', '3.46', '11,10,27,156', 'sell')">SELL</button>
+                        </td>
+                    
+            </table>
+            <h3>Top Losers</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Price</th>
+                        <th>% Chng</th>
+                        <th>Volume</th>
+                        <th>Buy/Sell</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TATASTEEL</td>
+                        <td>159.92</td>
+                        <td class="negative">-9.70</td>
+                        <td>4,23,55,891</td>
+                        <td><button class="buy" onclick="addToPortfolio('TATASTEEL', '159.2', '-9.70', '4,23,55,891', 'buy')">BUY</button>
+                            <button class="sell" onclick="addToPortfolio('TATASTEEL', '159.2', '-9.70', '4,23,55,891', 'sell')">SELL</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TCS</td>
+                        <td>4146</td>
+                        <td class="negative">-1.80</td>
+                        <td>16,52,856</td>
+                        <td><button class="buy" onclick="addToPortfolio('TCS', '4146', '-1.80', '16,52,856', 'buy')">BUY</button>
+                            <button class="sell" onclick="addToPortfolio('TATASTEEL', '159.2', '-9.70', '4,23,55,891', 'sell')">SELL</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>M&M</td>
+                        <td>3136.8</td>
+                        <td class="negative">-1.62</td>
+                        <td>16,52,856</td>
+                        <td><button class="buy" onclick="addToPortfolio('M&M', '3136.8', '-1.62', '16,52,856', 'buy')">BUY</button>
+                            <button class="sell" onclick="addToPortfolio('M&M', '3136.8', '-1.62', '16,52,856', 'sell')">SELL</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ICICIBANK</td>
+                        <td>1223.3</td>
+                        <td class="negative">-3.78</td>
+                        <td>10,35,260</td>
+                        <td><button class="buy" onclick="addToPortfolio('ICICIBANK', '1223.3', '-3.75', '10,35,260', 'buy')">BUY</button>
+                            <button class="sell" onclick="addToPortfolio('ICICIBANK', '1223.3', '-3.78', '10,35,260', 'sell')">SELL</button>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div id="active" class="tab-content" style="display:none;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Open</th>
+                        <th>High</th>
+                        <th>Low</th>
+                        <th>Prev. Close</th>
+                        <th>Price</th>
+                        <th>% Chng</th>
+                        <th>Buy/Sell</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>NIFTY 50</td>
+                        <td>24,985.30</td>
+                        <td>25,028.65</td>
+                        <td>24,920.05</td>
+                        <td>24,998.45</td>
+                        <td>24,964.25</td>
+                        <td class="negative">-0.14</td>
+                        <td><button class="buy" onclick="addToPortfolio('NIFTY 50', '1223.3', '-3.75', '10,35,260', 'buy')">BUY</button>
+                            <button class="sell" onclick="addToPortfolio('NIFTY 50', '1223.3', '-3.78', '10,35,260', 'sell')">SELL</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TRENT</td>
+                        <td>8,069.00</td>
+                        <td>8,308.80</td>
+                        <td>7,950.00</td>
+                        <td>8,028.85</td>
+                        <td>8,231.00</td>
+                        <td class="positive">2.52</td>
+                        <td><button class="buy" onclick="addToPortfolio('TRENT', '1223.3', '-3.75', '10,35,260', 'buy')">BUY</button>
+                            <button class="sell" onclick="addToPortfolio('TRENT', '1223.3', '-3.78', '10,35,260', 'sell')">SELL</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>HINDALCO</td>
+                        <td>736.00</td>
+                        <td>749.95</td>
+                        <td>733.05</td>
+                        <td>730.15</td>
+                        <td>746.70</td>
+                        <td class="positive">2.27</td>    
+                        <td><button class="buy" onclick="addToPortfolio('HINDALCO', '1223.3', '-3.75', '10,35,260', 'buy')">BUY</button>
+                            <button class="sell" onclick="addToPortfolio('HINDALCO', '1223.3', '-3.78', '10,35,260', 'sell')">SELL</button>
+                        </td>                   
+                    </tr>
+                    <tr>
+                        <td>HCLTECH</td>
+                        <td>1,808.65</td>
+                        <td>1,852.80</td>
+                        <td>1,800.65</td>
+                        <td>1,808.65</td>
+                        <td class="positive">1,839.95</td>
+                        <td class="positive">1.73</td>
+                        <td><button class="buy" onclick="addToPortfolio('HCLTECH', '1223.3', '-3.75', '10,35,260', 'buy')">BUY</button>
+                            <button class="sell" onclick="addToPortfolio('HCLTECH', '1223.3', '-3.78', '10,35,260', 'sell')">SELL</button>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <td>TECHM</td>
+                        <td>1,603.00</td>
+                        <td>1,645.00</td>
+                        <td>1,600.00</td>
+                        <td>1,619.70</td>
+                        <td class="positive">1,645.00</td>
+                        <td class="positive">1.56</td>   
+                        <td><button class="buy" onclick="addToPortfolio('TECHM', '1223.3', '-3.75', '10,35,260', 'buy')">BUY</button>
+                            <button class="sell" onclick="addToPortfolio('TECHM', '1223.3', '-3.78', '10,35,260', 'sell')">SELL</button>
+                        </td>      
+                    </tr>
+                    <tr>
+                        <td>ONGC</td>
+                        <td>291.30</td>
+                        <td>292.80</td>
+                        <td>288.75</td>
+                        <td>288.75</td>
+                        <td class="positive">292.65</td>
+                        <td class="positive">1.35</td>
+                        <td><button class="buy" onclick="addToPortfolio('ONGC', '1223.3', '-3.75', '10,35,260', 'buy')">BUY</button>
+                            <button class="sell" onclick="addToPortfolio('ONGC', '1223.3', '-3.78', '10,35,260', 'sell')">SELL</button>
+                        </td>      
+                    </tr>
+                    <tr>
+                        <td>JSWSTEEL</td>
+                        <td>1,007.30</td>
+                        <td>1,025.95</td>
+                        <td>1,006.00</td>
+                        <td>1,007.40</td>
+                        <td class="positive">1,019.45</td>
+                        <td class="positive">1.20</td>
+                        <td><button class="buy" onclick="addToPortfolio('JSWSTEEL', '1223.3', '-3.75', '10,35,260', 'buy')">BUY</button>
+                            <button class="sell" onclick="addToPortfolio('JSWSTEEL', '1223.3', '-3.78', '10,35,260', 'sell')">SELL</button>
+                        </td>  
+                    </tr>
+                    <tr>
+                        <td>HINDUNILVR</td>
+                        <td>2,764.80</td>
+                        <td>2,790.00</td>
+                        <td>2,737.05</td>
+                        <td>2,754.70</td>
+                        <td class="positive">2,785.05</td> 
+                        <td class="positive">1.10</td>  
+                        <td><button class="buy" onclick="addToPortfolio('HINDUNILVR', '1223.3', '-3.75', '10,35,260', 'buy')">BUY</button>
+                            <button class="sell" onclick="addToPortfolio('HINDUNILVR', '1223.3', '-3.78', '10,35,260', 'sell')">SELL</button>
+                        </td>  
+                    </tr>
+                
+                </tbody>
+            </table>
+            
+        </div>
+        <div id="portfolio" class="tab-content" style="display:none;">
+            <h3>ABHAY's Portfolio</h3>
+        </div>
+        
+    </div>
+
+    <script src="assignment2.js"></script>
+</body>
+</html>
